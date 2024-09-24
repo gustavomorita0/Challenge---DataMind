@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataMind</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <img src="./assets/img/curiosidade.png" alt="Logo" class="logo-img">
+            <div class="nav-mind">
+                <h1>DATAMIND</h1>
+                <hr class="hr1">
+                <p>By Tiger Solutions</p>
+            </div>
+            <button class="nav-btn" id="loginBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
+                    <path d="M507-480 384-357l56 57 180-180-180-180-56 57 123 123ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+                </svg>
+                <span>LOGIN</span>
+            </button>
+        </div>
+    </nav>
+    
+    <section id="section1">
+        <h1 class="titulo1">Analise <br> seus investidores</h1>
+
+        <div class="select-btn">
+            <button class="main-btn">Importar texto</button>
+            <button class="main-btn">Análise de investidores</button>
+            <button class="main-btn">Personalizar email</button>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="sec-titulo">
+            <h1 class="titulo2">O que é <span class="titulo2-span">"DataMind"</span></h1>
+        </div>
+        <div class="sec-text">
+            <p class="text1">DataMind é uma inteligência Artificial que processa arquivos .txt, organizando e analisando os dados. Em seguida, ela aplica técnicas de aprendizado de máquina para identificar os investidores mais qualificados através da missão e valores da empresa. Por fim, ela gera e-mails personalizados com o objetivo de agendar uma reunião com os investidores, desse modo, podemos economizar seu tempo e aumentar a taxa de conversão do seu negócio.</p>
+        </div>
+    </section>
+
+    <section id="section3">
+        <div class="sec-titulo1">
+            <h1 class="titulo3">Quais são suas <br>funcionalidades?</h1>
+        </div>
+        <div class="step-container">
+            <div class="step1">
+                <div class="titulo-step">Importar Texto</div>
+                <hr class="hr2">
+                <div class="itens-step">
+                    <ul>
+                        <li>Extração de dados</li>
+                        <li>Classificação e categorização</li>
+                        <li>Identificação de padrão</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step1">
+                <div class="titulo-step">Análise de investidores</div>
+                <hr class="hr2">
+                <div class="itens-step">
+                    <ul>
+                        <li>Base de dados</li>
+                        <li>Matching</li>
+                        <li>Ranking</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step1">
+                <div class="titulo-step">Personalizar email</div>
+                <hr class="hr2">
+                <div class="itens-step">
+                    <ul>
+                        <li>Linguagem natural</li>
+                        <li>A/B testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section4"></section>
+        <div class="sec-titulo2">
+            <h1 class="titulo4">Como se usa o DataMind? </h1>
+        </div>
+        <div class="sec-container">
+            <div class="step2">
+                <div class="sec-titulo3">
+                    <h1>Upload dos Arquivos.txt:</h1>
+                </div>
+                <hr class="hr2">
+                <div class="sec-text1">
+                    <p>A IA iniciaria a análise dos arquivos, aplicando os algoritmos de processamento de linguagem natural e aprendizado de máquina. Após a conclusão da análise, a IA geraria relatórios detalhados, incluindo: Dados extraídos, Insights e lista de investidores.</p>
+                </div>
+            </div>
+           
+            <div class="step2">
+                <div class="sec-titulo3">
+                    <h1>Criação e Envio de E-mails:</h1>
+                </div>
+                <hr class="hr2">
+                <div class="sec-text1">
+                    <p>O usuário selecionaria os investidores que deseja contatar. A IA geraria e-mails personalizados para cada investidor, adaptando o conteúdo de acordo com as informações disponíveis. O usuário poderia revisar os e-mails antes do envio e fazer ajustes se necessário. A IA faria o envio dos e-mails para o momento mais oportuno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <a href="#" class="link-footer">DataMind</a>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 DataMind | By Tiger Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Seleciona o botão de login
+        document.getElementById("loginBtn").addEventListener("click", function() {
+            // Redireciona para a página de login
+            window.location.href = "login.html"; // Substitua "login.html" pelo nome da página de login
+        });
+        </script>
+</body>
+</html>

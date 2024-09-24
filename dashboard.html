@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataMind</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <img src="./assets/img/curiosidade.png" alt="Logo" class="logo-img">
+            <div class="nav-mind">
+                <h1>DATAMIND</h1>
+                <hr class="hr1">
+                <p>By Tiger Solutions</p>
+            </div>
+            <img src="./assets/img/xampson.jpg" alt="Logo" class="logo-img1">
+        </div>
+    </nav>
+    <section id="section5">
+        <h1 class="titulo1">
+            Analise <br> seus investidores
+        </h1>
+
+        <div class="select-btn">
+            <label for="arquivo" class="main-btn" id="importar-texto">Importar texto</label>
+            <input type="file" id="arquivo" style="display: none;">
+
+            <button class="main-btn" id="analise-investidores">Análise de investidores</button>
+            <button class="main-btn" id="personalizar-email">Personalizar email</button>
+        </div>
+
+        <div class="loading-container" id="loading-container" style="display: none;">
+            <div class="container">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+
+        <div class="popup" id="image-popup" style="display: none;">
+            <button class="close-btn" id="close-popup">›</button>
+            <img src="" alt="Imagem do Popup" class="ia1" id="popup-image">
+            <div class="input-group">
+                <input type="email" class="input" id="Email" name="Email" placeholder="Pesquisar" autocomplete="off">
+                <input class="button--submit" value="Enviar" type="submit">
+            </div>            
+        </div>
+        
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <a href="#" class="link-footer">DataMind</a>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 DataMind | By Tiger Solutions</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const input = document.querySelector('#arquivo');
+        const importarTextoLabel = document.querySelector('#importar-texto');
+        const analiseInvestidoresBtn = document.querySelector('#analise-investidores');
+        const personalizarEmailBtn = document.querySelector('#personalizar-email');
+        const loadingContainer = document.querySelector('#loading-container');
+        const imagePopup = document.querySelector('#image-popup');
+        const closePopupBtn = document.querySelector('#close-popup');
+        const popupImage = document.querySelector('#popup-image');
+
+        input.addEventListener('change', function () {
+            if (this.files.length > 0) {
+                alert('Arquivo selecionado com sucesso: ' + this.files[0].name);
+                importarTextoLabel.style.color = '#28a745';
+                importarTextoLabel.style.textShadow = '0 0 9px #28a745, 0 0 18px #28a745, 0 0 36px #28a745';
+            }
+        });
+
+        // Função para abrir o popup com a imagem correspondente
+        function openPopup(button) {
+            loadingContainer.style.display = 'flex'; // Mostra o contêiner de carregamento
+
+            setTimeout(() => {
+                loadingContainer.style.display = 'none'; // Esconde o contêiner de carregamento
+                button.style.color = '#28a745'; // Muda a cor do botão
+                button.style.textShadow = '0 0 9px #28a745, 0 0 18px #28a745, 0 0 36px #28a745';
+
+                // Define a imagem correspondente para o popup
+                if (button === analiseInvestidoresBtn) {
+                    popupImage.src = './assets/img/ia.png'; // Imagem para Análise de investidores
+                } else if (button === personalizarEmailBtn) {
+                    popupImage.src = './assets/img/ia2.png'; // Imagem para Personalizar email
+                }
+
+                // Abre o popup da imagem
+                imagePopup.style.display = 'flex'; // Mostra o popup
+            }, 4000);
+        }
+
+        // Adiciona eventos de clique aos botões
+        analiseInvestidoresBtn.addEventListener('click', function () {
+            openPopup(analiseInvestidoresBtn);
+        });
+
+        personalizarEmailBtn.addEventListener('click', function () {
+            openPopup(personalizarEmailBtn);
+        });
+
+        // Fecha o popup quando o botão de fechar é clicado
+        closePopupBtn.addEventListener('click', function () {
+            imagePopup.style.display = 'none'; // Esconde o popup
+        });
+
+        // Fecha o popup quando clicar fora da imagem
+        imagePopup.addEventListener('click', function (event) {
+            if (event.target === imagePopup) {
+                imagePopup.style.display = 'none'; // Esconde o popup
+            }
+        });
+    </script>
+</body>
+
+</html>
